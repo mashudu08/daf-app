@@ -46,6 +46,22 @@
             border-color: #6932D4 !important;
         }
 
+.my-btn {
+    background-color: #FF622D !important;
+    border-color: #FF622D !important;
+    color: #fff !important;
+}
+
+    .my-btn:hover {
+        background-color: #6932D4 !important;
+        border-color: #6932D4 !important;
+        color: #FF622D !important;
+    }
+
+nav-item:hover {
+    color: #FF622D !important;
+}
+
 .goods-section{
     margin-left: 100px;
     margin-top:auto;

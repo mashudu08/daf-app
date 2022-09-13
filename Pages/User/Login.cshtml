@@ -12,7 +12,7 @@
     <div class="container">
 
         <h4>Login</h4>
-        @if ((bool)ViewData["isLoggedIn"] == false)
+        @if ((bool)ViewData["isValid"] == false)
         {
             <div class="alert alert-danger" role="alert">
                 Invalid credentials

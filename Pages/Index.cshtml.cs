@@ -22,6 +22,21 @@ namespace ST10115884_MashuduLuvhengo_POE_TASK1.Pages
         public void OnGet()
         {
 
+            if (HttpContext.Session.TryGetValue("isLoggedIn", out byte[] result))
+            {
+                ViewData["isLoggedIn"] = BitConverter.ToBoolean(result, 0);
+
+                if(HttpContext.Session.TryGetValue("isAdmin", out byte[] res))
+                {
+                    ViewData["isAdmin"] = BitConverter.ToBoolean(res, 0);
+                }
+                
+            }
+            else
+            {
+                ViewData["isLoggedIn"] = false;
+                ViewData["isAdmin"] = false;
+            }
         }
     }
 }

@@ -21,7 +21,22 @@ namespace ST10115884_MashuduLuvhengo_POE_TASK1.Pages.User
      
         public IActionResult OnGet()
         {
-            ViewData["isLoggedIn"] = true;
+            if (HttpContext.Session.TryGetValue("isLoggedIn", out byte[] result))
+            {
+                ViewData["isLoggedIn"] = BitConverter.ToBoolean(result, 0);
+
+                if (HttpContext.Session.TryGetValue("isAdmin", out byte[] res))
+                {
+                    ViewData["isAdmin"] = BitConverter.ToBoolean(res, 0);
+                }
+
+            }
+            else
+            {
+                ViewData["isLoggedIn"] = false;
+                ViewData["isValid"] = true;
+                ViewData["isAdmin"] = false;
+            }
             return Page();
         }
 
@@ -43,11 +58,14 @@ namespace ST10115884_MashuduLuvhengo_POE_TASK1.Pages.User
             // if (users.Count == 1)
             if (users.Count >= 1)
             {
+                HttpContext.Session.Set("isLoggedIn", BitConverter.GetBytes(true));
+                HttpContext.Session.Set("isAdmin", BitConverter.GetBytes(true));
                 return RedirectToPage("../Index");
             }
             else
             {
                 ViewData["isLoggedIn"] = false;
+                ViewData["isValid"] = false;
                 return Page();
             }
         }

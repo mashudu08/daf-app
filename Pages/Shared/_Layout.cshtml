@@ -7,30 +7,47 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css"/>
 </head>
-<body style="background-color: #6932D4 !important; color:#fff !important">
+<body style="background-color: #FFF !important; color:#fff !important">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow" style="background-color: #6932D4 !important; color:#fff !important">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow"
+            style="background-color: #fefefe !important; border-bottom-color: #6932D4 !important; color:#fff !important">
             <div class="container">
-                <a class="navbar-brand text-left" style="color:#fff; font-weight:bold;" asp-area="" asp-page="/Index">Disaster Alleviation Foundation</a>
+                <a class="navbar-brand text-left lead" style="color: #6932D4; font-weight:bold; font-size: 27px !important; font-family: 'Dancing Script', cursive !important;
+                    color: #9932cc !important;" asp-area="" asp-page="/Index">Disaster Alleviation Foundation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="color:#FFF !important;">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="color:#6932D4F !important;">
+                     <div class="collapse navbar-collapse"></div>
+                     <div class="collapse navbar-collapse"></div>
+                     <div class="collapse navbar-collapse"></div>
                     <ul class="navbar-nav flex-grow-1">
+                        @if(!(bool)ViewData["isAdmin"]){
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/AboutUs">About Us</a>
+                            <a class="nav-link" style="color: #6932D4 !important;" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Donations/Donate">Donate</a>
+                            <a class="nav-link" style="color: #6932D4 !important;" asp-area="" asp-page="/AboutUs">About Us</a>
                         </li>
-                        <li class="nav-item" style="margin-left: auto;">
-                            <a class="nav-link text-dark btn btn-primary" style="border-color: #FF622D !important; background-color: #FF622D !important; color: #fff !important; border-radius: 10px !important; "
-                               asp-area="" asp-page="/User/Login">Login</a>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #6932D4 !important;" asp-area="" asp-page="/Donations/Donate">Donate</a>
                         </li>
+                        }
+                        @if((bool)ViewData["isAdmin"]){
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #6932D4 !important;" asp-area="" asp-page="/Index">Disasters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #6932D4 !important;" asp-area="" asp-page="/AboutUs">Donations</a>
+                        </li>
+                        }
+                        @if(!(bool)ViewData["isLoggedIn"]) {
+                            <li class="nav-item" style="margin-left: 10%;">
+                                <a class="nav-link btn my-btn" style="border-radius:5px !important;  width:70px !important;"
+                                   asp-area="" asp-page="User/Login">Login</a>
+                            </li>
+                            }
                     </ul>
                 </div>
             </div>
