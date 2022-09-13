@@ -1,0 +1,56 @@
+﻿@page
+@model ST10115884_MashuduLuvhengo_POE_TASK1.Pages.Donations.GoodsModel
+
+@{
+    ViewData["Title"] = "Goods";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<div class="goods-section">
+<h2 style="text-align:center;">Donate Goods</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Goods.donationDate" class="control-label"></label>
+                    <input asp-for="Goods.donationDate" class="form-control" />
+                    <span asp-validation-for="Goods.donationDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Goods.category" class="control-label"></label>
+                    <select asp-for="Goods.category" class="form-control">
+                        <option value="clothes">Clothes</option>
+                        <option value="non-perishable foods">Non-perishable foods</option>
+                        @*<option value="Add new"><button>Add new category...</button></option>*@
+                    </select>
+                    <span asp-validation-for="Goods.category" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Goods.quantity" class="control-label"></label>
+                    <input asp-for="Goods.quantity" class="form-control" />
+                    <span asp-validation-for="Goods.quantity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Goods.description" class="control-label"></label>
+                    <input asp-for="Goods.description" class="form-control" />
+                    <span asp-validation-for="Goods.description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Goods.donor" class="control-label"></label>
+                    <input asp-for="Goods.donor" class="form-control" />
+                    <span asp-validation-for="Goods.donor" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Donate" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

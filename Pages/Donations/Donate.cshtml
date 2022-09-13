@@ -1,0 +1,38 @@
+﻿@page
+@model ST10115884_MashuduLuvhengo_POE_TASK1.Pages.Donations.DonateModel
+@{
+}
+<div class="donate-section" style="background-color: #6932D4 !important; color:#fff !important">
+    <h3>Donate</h3>
+    <p>
+        As a non-profit organization we would like to thank you so much for considering giving to us here at DAF –
+        we are so grateful for any gift (no matter the size) as we very much rely on donations and gifts to do what we do are doing
+        in our programs and the very impoverished communities in which we serve.
+    </p>
+
+    <div class="row" style="align-items:center;">
+        <div class="col-sm-5">
+            <div class="card" style="width: 18rem; height: 27rem; margin-left: 300px; border-color: #FF622D !important; ">
+                <img class="card-img-top" src="~/img/donate3.jpg" alt="Card image cap">
+                <div class="card-body" style="background-color: #6932D4 !important;">
+                    <h5 class="card-title">Goods Donations</h5>
+                    <p class="card-text">The donations of goods can be clothes, non-perishable foods, etc.</p>
+                    <a asp-page="/Donations/Goods" class="btn btn-primary">Donate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card" style="width: 18rem; height: 27rem; margin-left: 150px; border-color: #FF622D !important; ">
+                <img class="card-img-top" src="~/img/donate1.jpg" alt="Card image cap">
+                <div class="card-body" style="background-color: #6932D4 !important;">
+                    <h5 class="card-title">Monetary Donations</h5>
+                    <p class="card-text">
+                        The money donated is either paid out (for example
+                        to a local community organisation) or used to purchase goods.
+                    </p>
+                    <a asp-page="/Donations/Monetary" class="btn btn-primary">Donate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

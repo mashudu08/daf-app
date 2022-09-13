@@ -1,0 +1,141 @@
+﻿.hero-section {
+    position: relative;
+    height: 590px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 63%,rgba(0,0,0,0.2) 97%), url('/img/earthquake2.jpg');
+    background-size: cover;
+}
+
+    .hero-section h3 {
+        position: absolute;
+        font-size: 80px;
+        color: #fff;
+        top: 30%;
+        left: 33%;
+        transform: translateY(-50);
+    }
+
+    .hero-section p {
+        position: absolute;
+        width: 50%;
+        font-size: 20px;
+        color: #fff;
+        top: 50%;
+        left: 25%;
+        transform: translateY(-50);
+        text-align: center;
+    }
+
+    .hero-section button {
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        width: 120px !important;
+        top: 70%;
+        left: 47%;
+        transform: translateY(-50);
+        background-color: #FF622D;
+        border-color: #FF622D !important;
+        border-radius: 10px;
+    }
+
+
+        .hero-section button:hover {
+            color: #FFF !important;
+            background-color: #6932D4 !important;
+            border-color: #6932D4 !important;
+        }
+
+.goods-section{
+    margin-left: 100px;
+    margin-top:auto;
+    align-content:center;
+}
+.goods-section form{
+    align-content:center;
+}
+
+.monetary-section {
+    margin-left: 200px;
+    margin-top:auto;
+    align-content: center;
+}
+
+.monetary-section form {
+    align-content: center;
+}
+
+.donate-section {
+    margin: 10px 50px 10px 20px;
+    align-content: center;
+}
+
+.donate-section card {
+    margin: 50px;
+    align-content: center;
+}
+
+/*.donate-section button {
+    background-color: #FF622D;
+    border-color: #FF622D !important;
+    border-radius: 10px;
+    color: #fff;
+     width: 120px !important;
+}
+
+    .donate-section button:hover {
+        color: #FFF !important;
+        background-color: #6932D4 !important;
+        border-color: #6932D4 !important;
+        width: 120px !important;
+    }
+*/
+/* Sticky footer styles
+-------------------------------------------------- */
+/*html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+/*html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {*/
+  /* Margin bottom by footer height */
+  /*margin-bottom: 60px;
+}*/
+.footer {
+  /*position: absolute;*/
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;  
+}
+
+/*.title{
+    color: purple !important; 
+}*/
